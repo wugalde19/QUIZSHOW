@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8">
+	    <title>QuizShow</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+
+	    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+
+    	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+		
+    	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" class="text/css">
+
+    	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+
+
+	    <style type="text/css">
+		    /* dimensiones del desktop */
+		    @media (min-width: 980px) {
+		      body {
+		        padding-top: 60px;
+		      }
+		    }
+
+		    /* Landscape y telefonos */
+		    @media (max-width:480) {
+		      .copy {
+		         padding: 2.5% 10%;
+		      }
+		    }
+
+		     /* Encabezados y cuerpo principal */
+		    body{
+		       font-familiy: 'Open Sans', Helvetica, Arial, sans-serif;
+		    }
+		    .heading, .subheading {
+		     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+		       text-align: center;
+		    }
+		    p.lead {
+		       padding-top: 1.5%;
+		       font-size: 24px;
+		       line-height: 30px;
+		    }
+		    p {
+		      font-size: 18px;
+		      line-height: 24px;
+		    }
+
+    		/* pitch y accion */
+		    .pitch {
+		       padding: 2.5 0%;
+		    }
+		    .actions {
+		       padding: 3% 0%;
+		    }
+		    .footer {
+	        color: #cccccc;
+	        text-align: center;
+		    }
+		    .footer p {
+		        font-size: 11px;
+		    }
+		    .footer a {
+		        color: #ccccff;
+		    }
+			
+
+	    </style>
+    
+   	</head>
+    
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+	        <div class="navbar-inner">
+		        <div class="container">
+	                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="brand" href="#">ITCR</a>
+	            	
+	            	<div class="nav-collapse collapse">
+	                	<ul class="nav">
+	                    	<li class="active"><a href="#">Home</a></li>
+	                    	<li><a href="#about">About</a></li>
+	                    	<li><a href-"#contact"="">Contact</a></li>
+	                	</ul>
+	            	</div><!--/.nav-collapse -->
+	            </div>
+	        </div>
+    	</div>
+
+
+		<!-- Se utiliza row-fluid dentro de los containers para lograr resizing. -->
+		<!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap -->
+		<!-- http://stachoverflow.com/a/12270322 -->
+    	<div class="container">
+			<!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+			<!-- www.google.com/fonts/specimen/Ubuntu -->
+			<!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+		     <div class="row-fluid heading">
+		        <div class="span12">
+		            <h1>QuizShow</h1> 
+		        </div>
+		     </div>
+
+		    <div class="row-fluid subheading">
+		        <div class="span12">
+			        <!-- Special typography from Bootstrao for lead paragraph -->
+			        <!-- http://twitter.github.io/bootstrap/base-cdd.html#typography -->
+		            <p class="lead">Lenguajes de Programación</p>
+		        </div>
+		    </div>
+
+		    <div class="row-fluid pitch">
+		        <div class="span5 offset1 copy copy-right">
+		        	<div id="IdPreguntas">
+			         	<!--p>
+				            Aqui va el texto de la pregunta que se debe hacer la idea es que el javascript lo debe cargar dinamicamente del archivo de configuracion
+				            de JSON.
+			          	</p-->
+		          	</div>
+		        </div>
+
+	          	<div class="span5 actions">
+	            	<div class="span10 offset1">
+	         		</div>
+	        	</div>
+
+				
+				<div class="span5 actions">
+	                <div class="span10 offset1">
+	                	<div id="opciones">
+		                    <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+		                    <!--form method="post">
+		                        <fieldset>
+		                            <legend>Cual es su animal favorito?</legend>
+		                            <input type="checkbox" name="animal" value="perro">Perro <br>
+		                            <input type="checkbox" name="animal" value="gato">Gato<br>
+		                            <input type="checkbox" name="animal" value="pajaro">Pajaro<br>
+		                            <input type="submit" value="Submit now">
+		                        </fieldset>
+		                    </form-->
+	                    </div>
+	                    
+	                </div>
+	                <div class="botones">
+
+						
+						
+						<input id="btnSubmit" style="visibility:visible" type="button" value="Siguiente" onclick="cambiarPregunta()">
+
+						<input id="btnFin" style="visibility:hidden" type="button" value="Finalizar" onclick="mostrarResultados()">
+					
+					</div>
+	            </div>
+
+	            
+
+			</div> 
+
+			
+
+
+
+
+			<!-- PISTAS -->
+			<div class="row-fluid faq">
+	            <div class="span10 offset1">
+	            	<h3>Pistas</h3>
+	            	<div id="idPistas">
+						<!-- ACA SE MOSTRARAN LAS PISTAS PERO SE CREAN DE MANERA DINAMICA -->
+	                </div>
+	            </div>
+	        </div>
+
+
+
+
+			<div class="row-fluid footer">
+		        <div class="span12">
+		          	<p>
+		    	        Este trabajo esta licenciado por
+		        	    the <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+		          	    By-SA 3.0
+		            	</a>, creative commons
+		         	</p>
+		        </div>
+		    </div> 
+
+	    </div>
+
+		
+
+		<script type="text/javascript" charset="utf-8" src="js/java.js"></script>
+
+
+  	</body>
+
+</html>
